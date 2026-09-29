@@ -78,6 +78,5 @@ Les autres domaines de l'asso (`capoeirabomsinal.fr`, `capoeirabrasil-rennes.com
 - [ ] Activer le renouvellement automatique du domaine, moyen de paiement sur le compte de l'asso
 - [ ] Créer une adresse collective (`bureau@`) redirigée vers plusieurs membres du bureau
 - [ ] Déposer les identifiants IONOS, Cloudflare et Git dans un coffre partagé à deux personnes minimum
-- [ ] Compléter les mentions légales : siège social, directeur de la publication
-- [ ] Confirmer les tarifs de la saison et le numéro de la place Paul Ricœur (1 ou 5)
+- [ ] Compléter les mentions légales : directeur de la publication
 - [x] Récupérer le contenu de l'ancien WordPress (repris depuis web.archive.org, archive de février 2024)
