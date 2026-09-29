@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Capoeira Bom Sinal — Rennes</title>
+<meta name="description" content="Cours de capoeira à Rennes, tous niveaux, enfants et adultes. Horaires, lieux et contact de l'association Capoeira Bom Sinal.">
+<meta property="og:title" content="Capoeira Bom Sinal — Rennes">
+<meta property="og:description" content="Cours de capoeira à Rennes, tous niveaux, enfants et adultes.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     TOUT LE CONTENU DU SITE SE MODIFIE DANS LE BLOC <script> CI-DESSOUS.
+     Aucune autre partie du fichier n'a besoin d'être touchée.
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<style>
+:root{
+  --areia:#EFEAE0;
+  --papier:#FBF8F3;
+  --indigo:#16304F;
+  --azulejo:#2E6FA7;
+  --dende:#E6A21B;
+  --trait:rgba(22,48,79,.16);
+  --texte:#16304F;
+  --attenue:#5C6E85;
+  --serif:"Source Sans 3",ui-sans-serif,system-ui,"Segoe UI",sans-serif;
+  --titre:"Bricolage Grotesque","Source Sans 3",ui-sans-serif,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --areia:#0E1D2F;--papier:#132840;--indigo:#F0EDE6;--azulejo:#7FB4E0;
+    --trait:rgba(240,237,230,.18);--texte:#F0EDE6;--attenue:#A8BACD;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--areia);color:var(--texte);
+  font-family:var(--serif);font-size:1.0625rem;line-height:1.6;
+  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:min(68rem,100% - 2.5rem);margin-inline:auto}
+a{color:var(--azulejo)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--dende);outline-offset:3px;border-radius:2px}
+
+/* ── Bandeau ─────────────────────────────────────────── */
+.bandeau{border-bottom:1px solid var(--trait)}
+.bandeau .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem;align-items:baseline;padding:1.1rem 0}
+.marque{font-family:var(--titre);font-weight:800;font-size:1.0625rem;letter-spacing:-.01em}
+.bandeau nav{display:flex;gap:1.25rem;margin-left:auto;font-size:.9375rem}
+.bandeau nav a{text-decoration:none;color:var(--attenue)}
+.bandeau nav a:hover{color:var(--azulejo);text-decoration:underline}
+
+/* ── Ouverture ───────────────────────────────────────── */
+.ouverture{padding:clamp(3rem,9vw,6.5rem) 0 clamp(2.5rem,6vw,4rem)}
+.ouverture h1{
+  font-family:var(--titre);font-weight:800;
+  font-size:clamp(2.8rem,10.5vw,6.5rem);line-height:.92;letter-spacing:-.035em;
+  margin:0 0 1.5rem;max-width:14ch;
+}
+.chapeau{font-size:clamp(1.125rem,2.4vw,1.375rem);max-width:46ch;margin:0 0 2rem;color:var(--attenue)}
+.reperes{display:flex;flex-wrap:wrap;gap:.6rem}
+.repere{
+  border:1px solid var(--trait);border-radius:999px;padding:.4rem 1rem;
+  font-size:.9375rem;background:var(--papier);
+}
+.repere b{font-weight:600}
+
+/* ── Sections ────────────────────────────────────────── */
+section{padding:clamp(2.5rem,6vw,4.5rem) 0;border-top:1px solid var(--trait)}
+section h2{
+  font-family:var(--titre);font-weight:800;font-size:clamp(1.6rem,4vw,2.25rem);
+  letter-spacing:-.025em;margin:0 0 .4rem;
+}
+.intro{color:var(--attenue);max-width:60ch;margin:0 0 2rem}
+
+/* ── Semaine ─────────────────────────────────────────── */
+.echelle{display:none;grid-template-columns:7.5rem 1fr;gap:1rem;margin-bottom:.4rem}
+.echelle .heures{display:grid;font-size:.8125rem;color:var(--attenue)}
+.echelle .heures span{border-left:1px solid var(--trait);padding-left:.35rem}
+.jour{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;align-items:start;padding:.55rem 0;border-top:1px solid var(--trait)}
+.jour:last-child{border-bottom:1px solid var(--trait)}
+.jour h3{font-family:var(--titre);font-weight:500;font-size:1.0625rem;margin:.15rem 0 0;letter-spacing:-.01em}
+.creneaux{display:flex;flex-direction:column;gap:.4rem;min-width:0}
+.creneau{
+  background:var(--papier);border:1px solid var(--trait);border-left:4px solid var(--azulejo);
+  border-radius:4px;padding:.45rem .7rem;min-width:0;
+}
+.creneau.enfants{border-left-color:var(--dende)}
+.creneau .h{font-variant-numeric:tabular-nums;font-weight:600;font-size:.9375rem}
+.creneau .q{font-size:.9375rem}
+.creneau .l{font-size:.8125rem;color:var(--attenue);display:block}
+.repos{color:var(--attenue);font-size:.9375rem;padding:.35rem 0}
+
+@media (min-width:56rem){
+  .echelle{display:grid}
+  .echelle .heures{grid-template-columns:repeat(var(--cols),1fr)}
+  .creneaux{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:.35rem;position:relative}
+  .creneaux::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(to right,var(--trait) 0 1px,transparent 1px calc(100% / var(--cols)));
+  }
+  .creneau{grid-row:1;display:flex;gap:.5rem;align-items:baseline;overflow:hidden;white-space:nowrap}
+  .creneau .l{display:none}
+}
+
+.legende{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:1.25rem;font-size:.875rem;color:var(--attenue)}
+.puce{display:inline-block;width:.7rem;height:.7rem;border-radius:2px;margin-right:.4rem;vertical-align:baseline}
+
+/* ── Lieux, infos ────────────────────────────────────── */
+.colonnes{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr))}
+.lieu h3,.bloc h3{font-family:var(--titre);font-weight:500;font-size:1.125rem;margin:0 0 .3rem}
+.lieu p,.bloc p{margin:.2rem 0}
+.lieu address{font-style:normal;color:var(--attenue)}
+.bloc ul{margin:.4rem 0 0;padding-left:1.1rem}
+.bloc li{margin:.25rem 0}
+
+/* ── Contact ─────────────────────────────────────────── */
+.contact-ligne{font-size:clamp(1.125rem,2.6vw,1.5rem);margin:.3rem 0}
+.contact-ligne a{text-decoration-thickness:2px;text-underline-offset:3px}
+
+/* ── Pied ────────────────────────────────────────────── */
+footer{border-top:1px solid var(--trait);padding:2rem 0 3rem;font-size:.875rem;color:var(--attenue)}
+footer p{margin:.3rem 0;max-width:70ch}
+.aremplir{background:var(--dende);color:#2A1C00;padding:0 .3em;border-radius:2px;font-weight:600}
+</style>
+</head>
+<body>
+
+<header class="bandeau">
+  <div class="wrap">
+    <span class="marque" id="marque"></span>
+    <nav>
+      <a href="#semaine">Horaires</a>
+      <a href="#lieux">Lieux</a>
+      <a href="#inscription">Inscription</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="ouverture wrap">
+    <h1 id="titre"></h1>
+    <p class="chapeau" id="chapeau"></p>
+    <div class="reperes" id="reperes"></div>
+  </div>
+
+  <section id="semaine">
+    <div class="wrap">
+      <h2>La semaine</h2>
+      <p class="intro" id="intro-semaine"></p>
+      <div class="echelle"><span></span><div class="heures" id="heures"></div></div>
+      <div id="planning"></div>
+      <div class="legende">
+        <span><i class="puce" style="background:var(--dende)"></i>Enfants et ados</span>
+        <span><i class="puce" style="background:var(--azulejo)"></i>Adultes, tous niveaux</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="lieux">
+    <div class="wrap">
+      <h2>Où ça se passe</h2>
+      <div class="colonnes" id="lieux-liste"></div>
+    </div>
+  </section>
+
+  <section id="inscription">
+    <div class="wrap">
+      <h2>Venir essayer</h2>
+      <div class="colonnes">
+        <div class="bloc">
+          <h3>Premier cours</h3>
+          <p id="essai"></p>
+        </div>
+        <div class="bloc">
+          <h3>Adhésion à l'année</h3>
+          <div id="tarifs"></div>
+        </div>
+        <div class="bloc">
+          <h3>À apporter</h3>
+          <div id="materiel"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Nous écrire</h2>
+      <div id="contact-bloc"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p id="mentions"></p>
+    <p>Ce site n'utilise ni cookie, ni traceur, ni outil de mesure d'audience. Aucune donnée personnelle n'est collectée lors de la consultation.</p>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   CONTENU DU SITE — la seule partie à modifier.
+   Les passages marqués À COMPLÉTER s'affichent en surbrillance jaune
+   sur le site tant qu'ils n'ont pas été remplis.
+   ═══════════════════════════════════════════════════════════════════ */
+
+const ASSO = {
+  nom:      "Capoeira Bom Sinal",
+  ville:    "Rennes",
+  titre:    "La capoeira, à Rennes, toute l'année",
+  chapeau:  "Une association de quartier, des cours hebdomadaires pour les enfants comme pour les adultes, et une roda ouverte à qui veut apprendre le jeu, la musique et les chants.",
+
+  // Petites pastilles sous le titre
+  reperes: [
+    "Débutants bienvenus",
+    "Enfants dès 6 ans",     // À COMPLÉTER : âge réel
+    "Deux cours par semaine" // À COMPLÉTER : nombre réel
+  ],
+
+  introSemaine: "Les horaires ci-dessous valent pour l'année scolaire en cours. Pas de cours pendant les vacances scolaires.",
+
+  // Fenêtre horaire affichée sur la grille (heures pleines)
+  plage: { debut: 17, fin: 22 },
+
+  lieux: {
+    prouff: {
+      nom: "Centre sportif Jean Prouff",
+      adresse: "5 place Paul Ricœur, 35000 Rennes",
+      acces: "À COMPLÉTER : ligne de bus ou de métro la plus proche"
+    }
+    // Ajouter ici un second lieu si besoin :
+    // autre: { nom:"…", adresse:"…", acces:"…" }
+  },
+
+  // public : "enfants" (jaune) ou "adultes" (bleu)
+  semaine: [
+    { jour:"Lundi", seances:[
+      { debut:"18:00", fin:"19:00", public:"enfants", intitule:"Enfants",  lieu:"prouff" },
+      { debut:"19:00", fin:"21:00", public:"adultes", intitule:"Adultes",  lieu:"prouff" }
+    ]},
+    { jour:"Mardi",    seances:[] },
+    { jour:"Mercredi", seances:[] },  // À COMPLÉTER
+    { jour:"Jeudi",    seances:[] },  // À COMPLÉTER
+    { jour:"Vendredi", seances:[] },  // À COMPLÉTER
+    { jour:"Samedi",   seances:[] },
+    { jour:"Dimanche", seances:[] }
+  ],
+
+  essai: "Les deux premiers cours se font sans engagement et sans certificat médical. Prévenez-nous par mail avant de venir, on vous accueille à l'entrée.",
+
+  tarifs: [
+    "Adultes : À COMPLÉTER €/an",
+    "Enfants : À COMPLÉTER €/an",
+    "Adhésion à l'association comprise"
+  ],
+
+  materiel: [
+    "Une tenue souple, pantalon de préférence",
+    "Une bouteille d'eau",
+    "On pratique pieds nus"
+  ],
+
+  contact: {
+    email: "contact@capoeirarennes.fr",   // À COMPLÉTER : adresse réellement relevée
+    tel: "",                              // laisser vide si vous ne publiez pas de numéro
+    reseaux: [
+      // { nom:"Instagram", url:"https://instagram.com/…" }
+    ]
+  },
+
+  mentions: "Capoeira Bom Sinal, association loi 1901 déclarée en préfecture d'Ille-et-Vilaine. Siège social : À COMPLÉTER. Directeur de la publication : À COMPLÉTER. Hébergement : À COMPLÉTER."
+};
+
+/* ═══════════════════════════════════════════════════════════════════
+   AFFICHAGE — ne rien modifier en dessous de cette ligne.
+   ═══════════════════════════════════════════════════════════════════ */
+
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const marque = (s) => esc(s).replace(/À COMPLÉTER[^,.;)]*/g, m => `<span class="aremplir">${m}</span>`);
+const enMinutes = (h) => { const [a,b] = h.split(":").map(Number); return a*60 + b; };
+const affiche = (h) => h.replace(":", "h");
+
+document.title = `${ASSO.nom} — ${ASSO.ville}`;
+$("#marque").textContent = `${ASSO.nom} · ${ASSO.ville}`;
+$("#titre").textContent = ASSO.titre;
+$("#chapeau").textContent = ASSO.chapeau;
+$("#intro-semaine").textContent = ASSO.introSemaine;
+$("#reperes").innerHTML = ASSO.reperes.map(r => `<span class="repere">${marque(r)}</span>`).join("");
+
+// Grille horaire
+const { debut: h0, fin: h1 } = ASSO.plage;
+const cols = (h1 - h0) * 2;
+document.documentElement.style.setProperty("--cols", cols);
+$("#heures").innerHTML = Array.from({length: cols}, (_, i) =>
+  `<span>${i % 2 === 0 ? (h0 + i/2) + "h" : ""}</span>`).join("");
+
+$("#planning").innerHTML = ASSO.semaine.map(j => {
+  const corps = j.seances.length === 0
+    ? `<p class="repos">Pas de cours</p>`
+    : j.seances.map(s => {
+        const c0 = Math.round((enMinutes(s.debut) - h0*60) / 30) + 1;
+        const c1 = Math.round((enMinutes(s.fin)   - h0*60) / 30) + 1;
+        const lieu = ASSO.lieux[s.lieu];
+        return `<div class="creneau ${s.public === "enfants" ? "enfants" : ""}"
+                     style="grid-column:${Math.max(1,c0)} / ${Math.min(cols+1,c1)}">
+                  <span class="h">${affiche(s.debut)}–${affiche(s.fin)}</span>
+                  <span class="q">${esc(s.intitule)}</span>
+                  <span class="l">${lieu ? esc(lieu.nom) : ""}</span>
+                </div>`;
+      }).join("");
+  return `<div class="jour"><h3>${esc(j.jour)}</h3><div class="creneaux">${corps}</div></div>`;
+}).join("");
+
+// Lieux
+$("#lieux-liste").innerHTML = Object.values(ASSO.lieux).map(l => `
+  <div class="lieu">
+    <h3>${esc(l.nom)}</h3>
+    <address>${esc(l.adresse)}</address>
+    <p>${marque(l.acces)}</p>
+    <p><a href="https://www.openstreetmap.org/search?query=${encodeURIComponent(l.adresse)}"
+          rel="noopener">Voir sur la carte</a></p>
+  </div>`).join("");
+
+// Inscription
+$("#essai").innerHTML = marque(ASSO.essai);
+$("#tarifs").innerHTML = `<ul>${ASSO.tarifs.map(t => `<li>${marque(t)}</li>`).join("")}</ul>`;
+$("#materiel").innerHTML = `<ul>${ASSO.materiel.map(m => `<li>${esc(m)}</li>`).join("")}</ul>`;
+
+// Contact
+const c = ASSO.contact;
+$("#contact-bloc").innerHTML = [
+  c.email ? `<p class="contact-ligne"><a href="mailto:${esc(c.email)}">${esc(c.email)}</a></p>` : "",
+  c.tel   ? `<p class="contact-ligne"><a href="tel:${esc(c.tel.replace(/\s/g,""))}">${esc(c.tel)}</a></p>` : "",
+  c.reseaux.length
+    ? `<p>${c.reseaux.map(r => `<a href="${esc(r.url)}" rel="noopener">${esc(r.nom)}</a>`).join(" · ")}</p>`
+    : ""
+].join("");
+
+$("#mentions").innerHTML = marque(ASSO.mentions);
+</script>
+</body>
+</html>
