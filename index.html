@@ -4,163 +4,61 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Capoeira Bom Sinal — Rennes</title>
-<meta name="description" content="Cours de capoeira à Rennes, tous niveaux, enfants et adultes. Horaires, lieux et contact de l'association Capoeira Bom Sinal.">
+<meta name="description" content="Cours de capoeira à Rennes, tous niveaux, enfants, ados et adultes, avec le Professor Carneiro du Grupo Capoeira Brasil. Horaires, lieux, tarifs et contact.">
 <meta property="og:title" content="Capoeira Bom Sinal — Rennes">
-<meta property="og:description" content="Cours de capoeira à Rennes, tous niveaux, enfants et adultes.">
+<meta property="og:description" content="Cours de capoeira à Rennes, tous niveaux, enfants, ados et adultes.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="/images/roda-3.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     TOUT LE CONTENU DU SITE SE MODIFIE DANS LE BLOC <script> CI-DESSOUS.
-     Aucune autre partie du fichier n'a besoin d'être touchée.
+     TOUT LE CONTENU DE CETTE PAGE SE MODIFIE DANS LE BLOC <script>
+     EN BAS DU FICHIER. La mise en page est dans style.css.
      ═══════════════════════════════════════════════════════════════════ -->
-
-<style>
-:root{
-  --areia:#EFEAE0;
-  --papier:#FBF8F3;
-  --indigo:#16304F;
-  --azulejo:#2E6FA7;
-  --dende:#E6A21B;
-  --trait:rgba(22,48,79,.16);
-  --texte:#16304F;
-  --attenue:#5C6E85;
-  --serif:"Source Sans 3",ui-sans-serif,system-ui,"Segoe UI",sans-serif;
-  --titre:"Bricolage Grotesque","Source Sans 3",ui-sans-serif,system-ui,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{
-    --areia:#0E1D2F;--papier:#132840;--indigo:#F0EDE6;--azulejo:#7FB4E0;
-    --trait:rgba(240,237,230,.18);--texte:#F0EDE6;--attenue:#A8BACD;
-  }
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{
-  margin:0;background:var(--areia);color:var(--texte);
-  font-family:var(--serif);font-size:1.0625rem;line-height:1.6;
-  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{width:min(68rem,100% - 2.5rem);margin-inline:auto}
-a{color:var(--azulejo)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--dende);outline-offset:3px;border-radius:2px}
-
-/* ── Bandeau ─────────────────────────────────────────── */
-.bandeau{border-bottom:1px solid var(--trait)}
-.bandeau .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem;align-items:baseline;padding:1.1rem 0}
-.marque{font-family:var(--titre);font-weight:800;font-size:1.0625rem;letter-spacing:-.01em}
-.bandeau nav{display:flex;gap:1.25rem;margin-left:auto;font-size:.9375rem}
-.bandeau nav a{text-decoration:none;color:var(--attenue)}
-.bandeau nav a:hover{color:var(--azulejo);text-decoration:underline}
-
-/* ── Ouverture ───────────────────────────────────────── */
-.ouverture{padding:clamp(3rem,9vw,6.5rem) 0 clamp(2.5rem,6vw,4rem)}
-.ouverture h1{
-  font-family:var(--titre);font-weight:800;
-  font-size:clamp(2.8rem,10.5vw,6.5rem);line-height:.92;letter-spacing:-.035em;
-  margin:0 0 1.5rem;max-width:14ch;
-}
-.chapeau{font-size:clamp(1.125rem,2.4vw,1.375rem);max-width:46ch;margin:0 0 2rem;color:var(--attenue)}
-.reperes{display:flex;flex-wrap:wrap;gap:.6rem}
-.repere{
-  border:1px solid var(--trait);border-radius:999px;padding:.4rem 1rem;
-  font-size:.9375rem;background:var(--papier);
-}
-.repere b{font-weight:600}
-
-/* ── Sections ────────────────────────────────────────── */
-section{padding:clamp(2.5rem,6vw,4.5rem) 0;border-top:1px solid var(--trait)}
-section h2{
-  font-family:var(--titre);font-weight:800;font-size:clamp(1.6rem,4vw,2.25rem);
-  letter-spacing:-.025em;margin:0 0 .4rem;
-}
-.intro{color:var(--attenue);max-width:60ch;margin:0 0 2rem}
-
-/* ── Semaine ─────────────────────────────────────────── */
-.echelle{display:none;grid-template-columns:7.5rem 1fr;gap:1rem;margin-bottom:.4rem}
-.echelle .heures{display:grid;font-size:.8125rem;color:var(--attenue)}
-.echelle .heures span{border-left:1px solid var(--trait);padding-left:.35rem}
-.jour{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;align-items:start;padding:.55rem 0;border-top:1px solid var(--trait)}
-.jour:last-child{border-bottom:1px solid var(--trait)}
-.jour h3{font-family:var(--titre);font-weight:500;font-size:1.0625rem;margin:.15rem 0 0;letter-spacing:-.01em}
-.creneaux{display:flex;flex-direction:column;gap:.4rem;min-width:0}
-.creneau{
-  background:var(--papier);border:1px solid var(--trait);border-left:4px solid var(--azulejo);
-  border-radius:4px;padding:.45rem .7rem;min-width:0;
-}
-.creneau.enfants{border-left-color:var(--dende)}
-.creneau .h{font-variant-numeric:tabular-nums;font-weight:600;font-size:.9375rem}
-.creneau .q{font-size:.9375rem}
-.creneau .l{font-size:.8125rem;color:var(--attenue);display:block}
-.repos{color:var(--attenue);font-size:.9375rem;padding:.35rem 0}
-
-@media (min-width:56rem){
-  .echelle{display:grid}
-  .echelle .heures{grid-template-columns:repeat(var(--cols),1fr)}
-  .creneaux{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:.35rem;position:relative}
-  .creneaux::before{
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background:repeating-linear-gradient(to right,var(--trait) 0 1px,transparent 1px calc(100% / var(--cols)));
-  }
-  .creneau{grid-row:1;display:flex;gap:.5rem;align-items:baseline;overflow:hidden;white-space:nowrap}
-  .creneau .l{display:none}
-}
-
-.legende{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:1.25rem;font-size:.875rem;color:var(--attenue)}
-.puce{display:inline-block;width:.7rem;height:.7rem;border-radius:2px;margin-right:.4rem;vertical-align:baseline}
-
-/* ── Lieux, infos ────────────────────────────────────── */
-.colonnes{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr))}
-.lieu h3,.bloc h3{font-family:var(--titre);font-weight:500;font-size:1.125rem;margin:0 0 .3rem}
-.lieu p,.bloc p{margin:.2rem 0}
-.lieu address{font-style:normal;color:var(--attenue)}
-.bloc ul{margin:.4rem 0 0;padding-left:1.1rem}
-.bloc li{margin:.25rem 0}
-
-/* ── Contact ─────────────────────────────────────────── */
-.contact-ligne{font-size:clamp(1.125rem,2.6vw,1.5rem);margin:.3rem 0}
-.contact-ligne a{text-decoration-thickness:2px;text-underline-offset:3px}
-
-/* ── Pied ────────────────────────────────────────────── */
-footer{border-top:1px solid var(--trait);padding:2rem 0 3rem;font-size:.875rem;color:var(--attenue)}
-footer p{margin:.3rem 0;max-width:70ch}
-.aremplir{background:var(--dende);color:#2A1C00;padding:0 .3em;border-radius:2px;font-weight:600}
-</style>
 </head>
 <body>
 
 <header class="bandeau">
   <div class="wrap">
-    <span class="marque" id="marque"></span>
-    <nav>
+    <a class="marque" href="./" id="marque">Capoeira Bom Sinal</a>
+    <nav aria-label="Navigation principale">
       <a href="#semaine">Horaires</a>
       <a href="#lieux">Lieux</a>
-      <a href="#inscription">Inscription</a>
+      <a href="#professeur">Le professeur</a>
+      <a href="#inscription">Tarifs</a>
+      <a href="capoeira.html">La capoeira</a>
+      <a href="lignee.html">Lignée</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <div class="ouverture wrap">
-    <h1 id="titre"></h1>
-    <p class="chapeau" id="chapeau"></p>
-    <div class="reperes" id="reperes"></div>
+  <div class="ouverture">
+    <img src="images/roda-3.jpg" alt="Deux capoeiristes en plein jeu dans une grande salle lumineuse, l'un en coup de pied haut, l'autre en esquive basse." width="1080" height="720" fetchpriority="high">
+    <div class="wrap">
+      <p class="surtitre" id="surtitre"></p>
+      <h1 id="titre"></h1>
+      <p class="chapeau" id="chapeau"></p>
+      <div class="reperes" id="reperes"></div>
+      <div class="actions">
+        <a class="bouton" href="#semaine">Voir les horaires</a>
+        <a class="bouton fantome" href="#inscription">Venir essayer</a>
+      </div>
+    </div>
   </div>
 
   <section id="semaine">
     <div class="wrap">
       <h2>La semaine</h2>
       <p class="intro" id="intro-semaine"></p>
-      <div class="echelle"><span></span><div class="heures" id="heures"></div></div>
-      <div id="planning"></div>
+      <div class="semaine" id="planning"></div>
       <div class="legende">
         <span><i class="puce" style="background:var(--dende)"></i>Enfants et ados</span>
-        <span><i class="puce" style="background:var(--azulejo)"></i>Adultes, tous niveaux</span>
+        <span><i class="puce" style="background:var(--azulejo)"></i>Adultes</span>
       </div>
     </div>
   </section>
@@ -168,23 +66,44 @@ footer p{margin:.3rem 0;max-width:70ch}
   <section id="lieux">
     <div class="wrap">
       <h2>Où ça se passe</h2>
-      <div class="colonnes" id="lieux-liste"></div>
+      <p class="intro">Tous les lieux sont à Rennes et accessibles en transports en commun.</p>
+      <div class="grille" id="lieux-liste"></div>
+    </div>
+  </section>
+
+  <section id="professeur">
+    <div class="wrap prof">
+      <figure>
+        <img src="images/roda-2.jpg" alt="Le Professor Carneiro accroupi dans la roda, serrant la main d'un jeune élève, devant les musiciens et leurs berimbaus." width="1600" height="1066" loading="lazy">
+        <img class="portrait" src="images/carneiro.jpg" alt="Portrait du Professor Carneiro." width="206" height="206" loading="lazy">
+      </figure>
+      <div>
+        <h2>Le professeur</h2>
+        <h3 id="prof-nom"></h3>
+        <p class="role" id="prof-role"></p>
+        <div id="prof-texte"></div>
+      </div>
     </div>
   </section>
 
   <section id="inscription">
     <div class="wrap">
       <h2>Venir essayer</h2>
-      <div class="colonnes">
-        <div class="bloc">
+      <p class="intro" id="intro-inscription"></p>
+      <div class="grille quatre">
+        <div class="carte">
           <h3>Premier cours</h3>
           <p id="essai"></p>
         </div>
-        <div class="bloc">
-          <h3>Adhésion à l'année</h3>
+        <div class="carte">
+          <h3 id="tarifs-titre"></h3>
           <div id="tarifs"></div>
         </div>
-        <div class="bloc">
+        <div class="carte">
+          <h3>Au cours par cours</h3>
+          <div id="unitaire"></div>
+        </div>
+        <div class="carte">
           <h3>À apporter</h3>
           <div id="materiel"></div>
         </div>
@@ -192,9 +111,28 @@ footer p{margin:.3rem 0;max-width:70ch}
     </div>
   </section>
 
+  <section id="plus-loin">
+    <div class="wrap">
+      <h2>Pour aller plus loin</h2>
+      <div class="grille">
+        <a class="carte lien-carte" href="capoeira.html">
+          <h3>La capoeira</h3>
+          <p>Art martial afro-brésilien né de la résistance des esclaves : origines, Mestre Bimba, Mestre Pastinha, et la capoeira d'aujourd'hui.</p>
+          <p class="fleche">Lire l'histoire →</p>
+        </a>
+        <a class="carte lien-carte" href="lignee.html">
+          <h3>Le Grupo Capoeira Brasil</h3>
+          <p>Fondé en 1989 par trois mestres venus du groupe Senzala : Paulinho Sabiá, Boneco et Paulão Ceará.</p>
+          <p class="fleche">Découvrir la lignée →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="wrap">
       <h2>Nous écrire</h2>
+      <p class="intro">Une question, un cours d'essai, un stage ou une intervention en école : écrivez-nous.</p>
       <div id="contact-bloc"></div>
     </div>
   </section>
@@ -203,6 +141,7 @@ footer p{margin:.3rem 0;max-width:70ch}
 <footer>
   <div class="wrap">
     <p id="mentions"></p>
+    <p>Photos : vaphotos.fr.</p>
     <p>Ce site n'utilise ni cookie, ni traceur, ni outil de mesure d'audience. Aucune donnée personnelle n'est collectée lors de la consultation.</p>
   </div>
 </footer>
@@ -217,51 +156,86 @@ footer p{margin:.3rem 0;max-width:70ch}
 const ASSO = {
   nom:      "Capoeira Bom Sinal",
   ville:    "Rennes",
+  surtitre: "Grupo Capoeira Brasil · Rennes depuis 2004",
   titre:    "La capoeira, à Rennes, toute l'année",
-  chapeau:  "Une association de quartier, des cours hebdomadaires pour les enfants comme pour les adultes, et une roda ouverte à qui veut apprendre le jeu, la musique et les chants.",
+  chapeau:  "Des cours toute la semaine pour les enfants, les ados et les adultes, et une roda ouverte à qui veut apprendre le jeu, la musique et les chants.",
 
   // Petites pastilles sous le titre
   reperes: [
     "Débutants bienvenus",
-    "Enfants dès 6 ans",     // À COMPLÉTER : âge réel
-    "Deux cours par semaine" // À COMPLÉTER : nombre réel
+    "Enfants dès 5 ans",
+    "Un cours d'essai offert"
   ],
 
-  introSemaine: "Les horaires ci-dessous valent pour l'année scolaire en cours. Pas de cours pendant les vacances scolaires.",
-
-  // Fenêtre horaire affichée sur la grille (heures pleines)
-  plage: { debut: 17, fin: 22 },
+  introSemaine: "Horaires de l'année scolaire en cours. Pas de cours pendant les vacances scolaires.",  // À COMPLÉTER : confirmer pour les vacances
 
   lieux: {
     prouff: {
-      nom: "Centre sportif Jean Prouff",
-      adresse: "5 place Paul Ricœur, 35000 Rennes",
-      acces: "À COMPLÉTER : ligne de bus ou de métro la plus proche"
+      nom: "Gymnase Jean Prouff",
+      adresse: "Cité internationale Paul Ricœur, place Paul Ricœur (À COMPLÉTER : n° 1 ou 5), 35000 Rennes",
+      acces: "Métro Charles de Gaulle"
+    },
+    saintcyr: {
+      nom: "Gymnase Saint-Cyr",
+      adresse: "Rue du Pré de Bris, 35000 Rennes",
+      acces: "Bus 4, 11, 53 et 54, arrêt Guilloux"
+    },
+    veron: {
+      nom: "Salle Constant Véron",
+      adresse: "Rue Constant Véron, 35000 Rennes, quartier Bourg-l'Évêque",
+      acces: "Bus C2 et 12, arrêt Brest-Verdun"
     }
-    // Ajouter ici un second lieu si besoin :
-    // autre: { nom:"…", adresse:"…", acces:"…" }
   },
 
-  // public : "enfants" (jaune) ou "adultes" (bleu)
+  // public : "enfants" (jaune, enfants et ados) ou "adultes" (bleu)
+  // salle : facultatif, précise l'étage ou la salle
   semaine: [
     { jour:"Lundi", seances:[
-      { debut:"18:00", fin:"19:00", public:"enfants", intitule:"Enfants",  lieu:"prouff" },
-      { debut:"19:00", fin:"21:00", public:"adultes", intitule:"Adultes",  lieu:"prouff" }
+      { debut:"18:00", fin:"19:00", public:"enfants", intitule:"Ados",                          lieu:"prouff" },
+      { debut:"19:00", fin:"21:00", public:"adultes", intitule:"Adultes, tous niveaux",         lieu:"prouff" }
     ]},
-    { jour:"Mardi",    seances:[] },
-    { jour:"Mercredi", seances:[] },  // À COMPLÉTER
-    { jour:"Jeudi",    seances:[] },  // À COMPLÉTER
-    { jour:"Vendredi", seances:[] },  // À COMPLÉTER
-    { jour:"Samedi",   seances:[] },
-    { jour:"Dimanche", seances:[] }
+    { jour:"Mardi", seances:[
+      { debut:"12:30", fin:"13:30", public:"adultes", intitule:"Tous niveaux, pause déjeuner",  lieu:"prouff", salle:"4e étage" },
+      { debut:"21:00", fin:"22:00", public:"adultes", intitule:"Entraînement libre",            lieu:"saintcyr" }
+    ]},
+    { jour:"Jeudi", seances:[
+      { debut:"20:00", fin:"21:30", public:"adultes", intitule:"Intermédiaires et avancés",     lieu:"veron" }
+    ]},
+    { jour:"Vendredi", seances:[
+      { debut:"12:30", fin:"13:30", public:"adultes", intitule:"Tous niveaux, pause déjeuner",  lieu:"prouff" },
+      { debut:"17:00", fin:"18:00", public:"enfants", intitule:"Enfants, dès 5 ans",            lieu:"prouff" },
+      { debut:"18:00", fin:"20:00", public:"adultes", intitule:"Initiation et débutants",       lieu:"prouff" }
+    ]}
   ],
 
-  essai: "Les deux premiers cours se font sans engagement et sans certificat médical. Prévenez-nous par mail avant de venir, on vous accueille à l'entrée.",
+  professeur: {
+    nom:  "Professor Carneiro",
+    role: "Fondateur de l'association, il encadre les cours enfants, ados et adultes.",
+    texte: [
+      "Professor Carneiro développe la capoeira à Rennes depuis 2004, sous la supervision de Mestre Paulinho Sabiá du Grupo Capoeira Brasil, de Niterói (Rio de Janeiro, Brésil).",
+      "Professionnel de l'enseignement de la capoeira, il a fondé l'association Capoeira Bom Sinal, où il est aujourd'hui salarié. Il suit des formations régulières tout au long de l'année, actualise sans cesse ses cours et donne des conseils personnalisés selon le niveau de chaque élève.",
+      "Il enseigne aussi la capoeira sur les temps périscolaires, dans des écoles de Rennes et des alentours."
+    ],
+    mission: "Sa mission : proposer une capoeira de qualité et technique, qui permette l'épanouissement de chacun dans le respect de l'individu, et qui l'aide à trouver sa place dans un groupe, dans un climat de convivialité."
+  },
 
+  introInscription: "L'adhésion donne accès à tous les cours du professeur. Les rodas sont ouvertes à tous, adhérents ou non : l'occasion de pratiquer ensemble.",
+
+  essai: "Un cours d'essai est offert avant toute adhésion. Prévenez-nous par mail avant de venir, on vous accueille à l'entrée.",
+
+  tarifsTitre: "Adhésion annuelle",
   tarifs: [
-    "Adultes : À COMPLÉTER €/an",
-    "Enfants : À COMPLÉTER €/an",
-    "Adhésion à l'association comprise"
+    "À COMPLÉTER : tarifs 2023-2024, à confirmer pour cette saison",
+    "Adultes : 200 €",
+    "Étudiants et demandeurs d'emploi : 180 €",
+    "Enfants et ados : 120 €",
+    "Paiement en plusieurs chèques possible, voir avec le bureau"
+  ],
+
+  unitaire: [
+    "10 € le cours, tout public",
+    "À régler au professeur en début de cours",
+    "Après le cours d'essai, la participation suppose une adhésion ou un cours payé"
   ],
 
   materiel: [
@@ -278,7 +252,7 @@ const ASSO = {
     ]
   },
 
-  mentions: "Capoeira Bom Sinal, association loi 1901 déclarée en préfecture d'Ille-et-Vilaine. Siège social : À COMPLÉTER. Directeur de la publication : À COMPLÉTER. Hébergement : À COMPLÉTER."
+  mentions: "Capoeira Bom Sinal, association loi 1901 déclarée en préfecture d'Ille-et-Vilaine. Siège social : À COMPLÉTER. Directeur de la publication : À COMPLÉTER. Hébergement : Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis."
 };
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -288,54 +262,55 @@ const ASSO = {
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const marque = (s) => esc(s).replace(/À COMPLÉTER[^,.;)]*/g, m => `<span class="aremplir">${m}</span>`);
-const enMinutes = (h) => { const [a,b] = h.split(":").map(Number); return a*60 + b; };
-const affiche = (h) => h.replace(":", "h");
+const liste = (items) => `<ul>${items.map(i => `<li>${marque(i)}</li>`).join("")}</ul>`;
+const affiche = (h) => h.replace(":", "h").replace(/h00$/, "h");
 
 document.title = `${ASSO.nom} — ${ASSO.ville}`;
-$("#marque").textContent = `${ASSO.nom} · ${ASSO.ville}`;
+$("#surtitre").textContent = ASSO.surtitre;
 $("#titre").textContent = ASSO.titre;
 $("#chapeau").textContent = ASSO.chapeau;
-$("#intro-semaine").textContent = ASSO.introSemaine;
+$("#intro-semaine").innerHTML = marque(ASSO.introSemaine);
 $("#reperes").innerHTML = ASSO.reperes.map(r => `<span class="repere">${marque(r)}</span>`).join("");
 
-// Grille horaire
-const { debut: h0, fin: h1 } = ASSO.plage;
-const cols = (h1 - h0) * 2;
-document.documentElement.style.setProperty("--cols", cols);
-$("#heures").innerHTML = Array.from({length: cols}, (_, i) =>
-  `<span>${i % 2 === 0 ? (h0 + i/2) + "h" : ""}</span>`).join("");
-
-$("#planning").innerHTML = ASSO.semaine.map(j => {
-  const corps = j.seances.length === 0
-    ? `<p class="repos">Pas de cours</p>`
-    : j.seances.map(s => {
-        const c0 = Math.round((enMinutes(s.debut) - h0*60) / 30) + 1;
-        const c1 = Math.round((enMinutes(s.fin)   - h0*60) / 30) + 1;
-        const lieu = ASSO.lieux[s.lieu];
-        return `<div class="creneau ${s.public === "enfants" ? "enfants" : ""}"
-                     style="grid-column:${Math.max(1,c0)} / ${Math.min(cols+1,c1)}">
-                  <span class="h">${affiche(s.debut)}–${affiche(s.fin)}</span>
-                  <span class="q">${esc(s.intitule)}</span>
-                  <span class="l">${lieu ? esc(lieu.nom) : ""}</span>
-                </div>`;
-      }).join("");
-  return `<div class="jour"><h3>${esc(j.jour)}</h3><div class="creneaux">${corps}</div></div>`;
-}).join("");
+// Semaine
+$("#planning").innerHTML = ASSO.semaine.filter(j => j.seances.length).map(j => `
+  <div class="carte jour">
+    <h3>${esc(j.jour)}</h3>
+    ${j.seances.map(s => {
+      const lieu = ASSO.lieux[s.lieu];
+      const ou = [lieu ? lieu.nom : "", s.salle || ""].filter(Boolean).join(", ");
+      return `<div class="creneau ${s.public === "enfants" ? "enfants" : ""}">
+                <span class="h">${affiche(s.debut)} – ${affiche(s.fin)}</span>
+                <span class="q">${marque(s.intitule)}</span>
+                <span class="l">${esc(ou)}</span>
+              </div>`;
+    }).join("")}
+  </div>`).join("");
 
 // Lieux
 $("#lieux-liste").innerHTML = Object.values(ASSO.lieux).map(l => `
-  <div class="lieu">
+  <div class="carte lieu">
     <h3>${esc(l.nom)}</h3>
-    <address>${esc(l.adresse)}</address>
-    <p>${marque(l.acces)}</p>
-    <p><a href="https://www.openstreetmap.org/search?query=${encodeURIComponent(l.adresse)}"
+    <address>${marque(l.adresse)}</address>
+    <p class="acces">${marque(l.acces)}</p>
+    <p><a href="https://www.openstreetmap.org/search?query=${encodeURIComponent(l.nom + ", Rennes")}"
           rel="noopener">Voir sur la carte</a></p>
   </div>`).join("");
 
+// Professeur
+const p = ASSO.professeur;
+$("#prof-nom").textContent = p.nom;
+$("#prof-role").textContent = p.role;
+$("#prof-texte").innerHTML = p.texte.map(t => `<p>${marque(t)}</p>`).join("")
+  + `<p class="mission">${marque(p.mission)}</p>`;
+
 // Inscription
+$("#intro-inscription").innerHTML = marque(ASSO.introInscription);
 $("#essai").innerHTML = marque(ASSO.essai);
-$("#tarifs").innerHTML = `<ul>${ASSO.tarifs.map(t => `<li>${marque(t)}</li>`).join("")}</ul>`;
-$("#materiel").innerHTML = `<ul>${ASSO.materiel.map(m => `<li>${esc(m)}</li>`).join("")}</ul>`;
+$("#tarifs-titre").textContent = ASSO.tarifsTitre;
+$("#tarifs").innerHTML = liste(ASSO.tarifs);
+$("#unitaire").innerHTML = liste(ASSO.unitaire);
+$("#materiel").innerHTML = liste(ASSO.materiel);
 
 // Contact
 const c = ASSO.contact;
